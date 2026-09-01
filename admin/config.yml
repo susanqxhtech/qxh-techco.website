@@ -1,40 +1,16 @@
 backend:
   name: github
-  repo: susanqxhtech/qxh‑techco‑website
+  repo: susanqxh/qxh‑techco‑website
   branch: main
-media_folder: "uploads"
-public_folder: "/uploads"
-
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
 collections:
-  - name: "pages"
-    label: "Website Pages"
+  - name: pages
+    label: Pages
     files:
-      - label: "Home Page"
-        name: index
-        file: "index.html"
+      - name: index
+        label: Home Page
+        file: "index.md"
         fields:
-          - { label: "Page Title", name: title, widget: "string" }
-          - { label: "Hero Heading", name: hero_title, widget: "string" }
-          - { label: "Hero Subtext", name: hero_sub, widget: "text" }
-          - { label: "Hero Background Image", name: hero_img, widget: "image" }
-
-      - label: "About Us Page"
-        name: about
-        file: "about.html"
-        fields:
-          - { label: "Page Title", name: title, widget: "string" }
-          - { label: "Main Content", name: content, widget: "markdown" }
-
-      - label: "Products Page"
-        name: products
-        file: "products.html"
-        fields:
-          - { label: "Page Title", name: title, widget: "string" }
-          - { label: "Product Content", name: content, widget: "markdown" }
-
-      - label: "Contact Page"
-        name: contact
-        file: "contact.html"
-        fields:
-          - { label: "Contact Title", name: title, widget: "string" }
-          - { label: "Contact Info Text", name: contact_text, widget: "text" }
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
